@@ -13,7 +13,11 @@
     "react-native-qrcode-svg": "^6.3.21",
     "react-native-safe-area-context": "^5.8.0",
     "react-native-screens": "^4.25.2",
-    "react-native-svg": "^15.15.5"
+    "react-native-svg": "^15.15.5",
+    "expo-splash-screen": "~0.29.0",
+    "expo-notifications": "~0.31.0",
+    "expo-device": "~7.1.0",
+    "expo-constants": "~17.1.0"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",

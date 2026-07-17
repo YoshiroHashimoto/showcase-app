@@ -24,7 +24,10 @@
       "favicon": "./assets/favicon.png"
     },
     "extra": {
-      "apiBaseUrl": "https://3000-ild7hdkgbqkqho4fz2agj-72b70e0a.sg1.manus.computer"
+      "apiBaseUrl": "https://3000-ild7hdkgbqkqho4fz2agj-72b70e0a.sg1.manus.computer",
+      "eas": {
+        "projectId": "b8c4dd30-7c4c-4dec-b545-573ba2b7b3c2"
+      }
     }
   }
 }
