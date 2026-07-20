@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "🎂 Showcase",
+    "name": "Showcase",
     "slug": "cake-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/cake_icon.png",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
@@ -13,8 +13,8 @@
     "android": {
       "package": "com.cakeapp.order",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundColor": "#000000",
+        "foregroundImage": "./assets/cake_icon.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },

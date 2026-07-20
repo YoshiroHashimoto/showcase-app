@@ -68,11 +68,11 @@ export async function fetchCategories(): Promise<Category[]> {
 }
 
 export async function fetchActiveDishes(): Promise<Dish[]> {
-  return trpcQuery<Dish[]>("dishes.listActive");
+  return trpcQuery<Dish[]>("dishes.list");
 }
 
 export async function fetchActiveNews(): Promise<NewsItem[]> {
-  return trpcQuery<NewsItem[]>("news.listActive");
+  return trpcQuery<NewsItem[]>("news.active");
 }
 
 export async function createOrder(items: OrderItem[], note?: string): Promise<{ orderNumber: string; token: string }> {
