@@ -608,28 +608,28 @@ export default function App() {
       </ScrollView>
 
       {/* Dish List */}
-      {loading ? (
-        <View style={styles.center}>
-          <ActivityIndicator size="large" color={GOLD} />
-        </View>
-      ) : filteredDishes.length === 0 ? (
-        <View style={styles.center}>
-          <Text style={{ color: MUTED, fontSize: 14 }}>このカテゴリには商品がありません</Text>
-        </View>
-      ) : (
-        <ScrollView
-          style={styles.list}
-          contentContainerStyle={{ paddingBottom: cartCount > 0 ? 100 : 32 }}
-          refreshControl={
-            <RefreshControl
-              refreshing={refreshing}
-              onRefresh={onRefresh}
-              tintColor={GOLD}
-              colors={[GOLD]}
-            />
-          }
-        >
-          {filteredDishes.map(dish => {
+      <ScrollView
+        style={styles.list}
+        contentContainerStyle={{ paddingBottom: cartCount > 0 ? 100 : 32, flexGrow: 1 }}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            tintColor={GOLD}
+            colors={[GOLD]}
+          />
+        }
+      >
+        {loading ? (
+          <View style={styles.center}>
+            <ActivityIndicator size="large" color={GOLD} />
+          </View>
+        ) : filteredDishes.length === 0 ? (
+          <View style={styles.center}>
+            <Text style={{ color: MUTED, fontSize: 14 }}>このカテゴリには商品がありません</Text>
+          </View>
+        ) : (
+          filteredDishes.map(dish => {
             const cartItem = cart.find(i => i.id === dish.id);
             return (
               <DishCard
@@ -640,9 +640,9 @@ export default function App() {
                 cartQty={cartItem?.quantity ?? 0}
               />
             );
-          })}
-        </ScrollView>
-      )}
+          })
+        )}
+      </ScrollView>
 
       {/* 注文リストバー (添付3): カートに商品がある場合のみ画面下部に表示 */}
       {cartCount > 0 && (
