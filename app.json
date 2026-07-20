@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "ケーキ注文",
+    "name": "🎂 Showcase",
     "slug": "cake-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -28,6 +28,9 @@
       "eas": {
         "projectId": "b8c4dd30-7c4c-4dec-b545-573ba2b7b3c2"
       }
-    }
+    },
+    "plugins": [
+      "expo-splash-screen"
+    ]
   }
 }

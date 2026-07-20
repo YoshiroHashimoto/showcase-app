@@ -1,5 +1,5 @@
-// APIベースURL: デプロイ後は実際のWebDev公開 URLに変更してください
-export const API_BASE_URL = "https://3000-ild7hdkgbqkqho4fz2agj-72b70e0a.sg1.manus.computer";
+// APIベースURL
+export const API_BASE_URL = "https://cakemanage-wwq7fcan.manus.space";
 
 async function trpcQuery<T>(procedure: string, input?: unknown): Promise<T> {
   const url = `${API_BASE_URL}/api/trpc/${procedure}`;
