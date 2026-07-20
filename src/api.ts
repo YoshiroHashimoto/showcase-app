@@ -93,9 +93,16 @@ export async function fetchActiveNews(): Promise<NewsItem[]> {
 
 export async function createOrder(
   items: OrderItem[],
-  note?: string
+  candleLarge?: number,
+  candleSmall?: number,
+  notes?: string
 ): Promise<{ orderNumber: string; token: string }> {
-  return trpcMutation("orders.create", { items, note });
+  return trpcMutation("orders.create", {
+    items,
+    candleLarge: candleLarge ?? 0,
+    candleSmall: candleSmall ?? 0,
+    notes: notes ?? "",
+  });
 }
 
 export async function registerPushToken(token: string, platform?: string): Promise<void> {
