@@ -610,7 +610,7 @@ export default function App() {
       {/* Dish List */}
       <ScrollView
         style={styles.list}
-        contentContainerStyle={{ paddingBottom: cartCount > 0 ? 100 : 32, flexGrow: 1 }}
+        contentContainerStyle={{ paddingBottom: cartCount > 0 ? 140 : 32, flexGrow: 1 }}
         refreshControl={
           <RefreshControl
             refreshing={refreshing}
@@ -868,6 +868,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     padding: 20,
+    paddingBottom: 36,
     maxHeight: '90%',
     flexShrink: 1,
   },
