@@ -610,7 +610,7 @@ export default function App() {
       {/* Dish List */}
       <ScrollView
         style={styles.list}
-        contentContainerStyle={{ paddingBottom: cartCount > 0 ? 140 : 32, flexGrow: 1 }}
+        contentContainerStyle={{ paddingBottom: cartCount > 0 ? 180 : 32, flexGrow: 1 }}
         refreshControl={
           <RefreshControl
             refreshing={refreshing}
@@ -836,7 +836,7 @@ const styles = StyleSheet.create({
   // ─── 注文リストバー (添付3) ────────────────────────────────────────────────
   cartBar: {
     position: 'absolute',
-    bottom: 20,
+    bottom: 60,
     left: 16,
     right: 16,
     backgroundColor: PINK,
@@ -868,7 +868,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     padding: 20,
-    paddingBottom: 36,
+    paddingBottom: 60,
     maxHeight: '90%',
     flexShrink: 1,
   },
