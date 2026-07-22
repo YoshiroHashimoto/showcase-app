@@ -961,7 +961,7 @@ const styles = StyleSheet.create({
   detailDesc: { color: MUTED, fontSize: 15, lineHeight: 26 },
   detailFooter: {
     padding: 16,
-    paddingBottom: 24,
+    paddingBottom: 80,  // Androidナビゲーションバー分の余白
     backgroundColor: BG,
     borderTopWidth: 1,
     borderTopColor: BORDER,
