@@ -51,6 +51,7 @@ export type Dish = {
   description: string | null;
   price: number;          // CMSはnumber型で返す
   imageUrl: string | null;
+  detailImageUrl: string | null;  // 詳細モーダル用画像（未設定の場合はimageUrlを使用）
   isActive: number;
   sortOrder: number;
 };

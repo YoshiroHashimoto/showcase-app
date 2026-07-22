@@ -191,11 +191,11 @@ function DishDetailModal({
       <View style={{ flex: 1, backgroundColor: BG }}>
         <StatusBar style="light" />
 
-        {/* 画像は固定表示 */}
+        {/* 画像は固定表示（detailImageUrlがあればそちら、なければimageUrlを使用） */}
         <View style={{ width: SCREEN_W, height: IMAGE_H, backgroundColor: '#1a1a1a' }}>
-          {dish.imageUrl ? (
+          {(dish.detailImageUrl || dish.imageUrl) ? (
             <Image
-              source={{ uri: dish.imageUrl }}
+              source={{ uri: (dish.detailImageUrl || dish.imageUrl)! }}
               style={{ width: SCREEN_W, height: IMAGE_H }}
               resizeMode="cover"
             />
